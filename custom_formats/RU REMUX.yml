@@ -1,7 +1,7 @@
-name: RU Reject REMUX
-description: Rejects REMUX releases.
+name: RU REMUX
+description: Matches REMUX releases.
 tags:
-  - Reject
+  - Source
   - Remux
   - Russian
 conditions:
