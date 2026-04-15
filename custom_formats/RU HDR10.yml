@@ -1,0 +1,12 @@
+name: RU HDR10
+description: Matches HDR10 releases.
+tags:
+  - HDR
+  - Russian
+conditions:
+  - name: HDR10
+    negate: false
+    pattern: RU HDR10
+    required: true
+    type: release_title
+tests: []

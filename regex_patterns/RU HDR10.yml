@@ -1,0 +1,13 @@
+name: RU HDR10
+pattern: ^(?=.*(?i:HDR10)).*$
+description: HDR10 marker.
+tags:
+  - HDR
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 WEB-DL 2160p HDR10
+  - expected: false
+    id: 2
+    input: Movie 2024 WEB-DL 2160p SDR

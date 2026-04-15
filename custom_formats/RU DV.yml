@@ -1,0 +1,12 @@
+name: RU DV
+description: Matches Dolby Vision releases.
+tags:
+  - Dolby Vision
+  - Russian
+conditions:
+  - name: DV
+    negate: false
+    pattern: RU DV
+    required: true
+    type: release_title
+tests: []

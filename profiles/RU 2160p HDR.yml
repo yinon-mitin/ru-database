@@ -1,0 +1,56 @@
+name: RU 2160p HDR
+description: 4K HDR profile for Russian trackers. Prefers REMUX, HDR family formats, HEVC and high quality WEB-DL.
+tags:
+  - 2160p
+  - HDR
+  - Russian
+upgradesAllowed: true
+minCustomFormatScore: 0
+upgradeUntilScore: 9000
+minScoreIncrement: 1
+custom_formats:
+  - name: RU HDR ANY
+    score: 5000
+  - name: RU DV
+    score: 2500
+  - name: RU HDR10+
+    score: 1800
+  - name: RU HDR10
+    score: 1200
+  - name: RU HEVC
+    score: 2000
+  - name: RU REMUX
+    score: 1800
+  - name: RU WEB-DL
+    score: 1200
+  - name: RU WEBRip
+    score: 700
+  - name: RU 10bit
+    score: 500
+  - name: RU Reject BR-DISK
+    score: -10000
+  - name: RU Reject AV1
+    score: -10000
+  - name: RU Reject LQ
+    score: -10000
+  - name: RU Reject Upscale
+    score: -5000
+  - name: RU Reject AI
+    score: -3000
+qualities:
+  - id: -103
+    name: RU 2160p HDR
+    description: 2160p HDR priority group for Russian trackers.
+    qualities:
+      - id: 3
+        name: Remux-2160p
+      - id: 5
+        name: WEBDL-2160p
+      - id: 4
+        name: Bluray-2160p
+      - id: 6
+        name: WEBRip-2160p
+upgrade_until:
+  id: -103
+  name: RU 2160p HDR
+language: must_original
