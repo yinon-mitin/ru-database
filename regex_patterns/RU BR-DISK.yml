@@ -1,0 +1,20 @@
+name: RU BR-DISK
+pattern: '(?i)\b(BDMV|BDISO|ISO|UHD[\s._-]?BD|Blu[\s-]?ray[\s-]?Disc|BD[\s-]?ROM|COMPLETE|FULL[\s-]?BLURAY|FULL[\s-]?BD)\b'
+description: Full disc / BDMV / ISO markers.
+tags:
+  - Source
+  - Disc
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 BDMV
+  - expected: true
+    id: 2
+    input: Movie 2024 FULL BLURAY
+  - expected: true
+    id: 3
+    input: Movie 2024 BDISO
+  - expected: false
+    id: 4
+    input: Movie 2024 BDRip 1080p

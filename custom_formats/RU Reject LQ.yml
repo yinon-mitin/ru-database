@@ -1,0 +1,13 @@
+name: RU Reject LQ
+description: Rejects low quality releases marked as LQ.
+tags:
+  - Reject
+  - Low Quality
+  - Russian
+conditions:
+  - name: LQ
+    negate: false
+    pattern: RU LQ
+    required: true
+    type: release_title
+tests: []

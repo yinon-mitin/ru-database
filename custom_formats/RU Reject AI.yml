@@ -1,0 +1,13 @@
+name: RU Reject AI
+description: Rejects AI-upscaled or AI-enhanced releases.
+tags:
+  - Reject
+  - AI
+  - Russian
+conditions:
+  - name: AI
+    negate: false
+    pattern: RU AI Upscale
+    required: true
+    type: release_title
+tests: []

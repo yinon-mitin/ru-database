@@ -1,0 +1,14 @@
+name: RU AV1
+pattern: '(?i)\bAV1\b'
+description: AV1 codec marker.
+tags:
+  - Encoder
+  - Codec
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 WEB-DL 2160p AV1
+  - expected: false
+    id: 2
+    input: Movie 2024 WEB-DL 2160p HEVC

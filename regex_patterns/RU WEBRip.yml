@@ -1,0 +1,14 @@
+name: RU WEBRip
+pattern: '(?i)\b(WEB[\s._-]?RIP|WEBRIP)\b'
+description: WEBRip source marker.
+tags:
+  - Source
+  - WEBRip
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 WEBRip 1080p
+  - expected: false
+    id: 2
+    input: Movie 2024 WEB-DL 1080p

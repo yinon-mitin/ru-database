@@ -1,0 +1,13 @@
+name: RU HEVC
+description: Matches HEVC / x265 / H.265 releases.
+tags:
+  - Encoder
+  - Codec
+  - Russian
+conditions:
+  - name: HEVC
+    negate: false
+    pattern: RU HEVC
+    required: true
+    type: release_title
+tests: []
