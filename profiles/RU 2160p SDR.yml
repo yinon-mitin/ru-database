@@ -1,18 +1,20 @@
 name: RU 2160p SDR
-description: 4K SDR profile for Russian trackers. Prefers SDR, HEVC and WEB-DL while rejecting HDR, disc structures, REMUX and common junk.
+description: 4K SDR profile for Russian trackers. Prefers SDR, HEVC, REMUX and high quality WEB-DL while rejecting HDR, disc structures and common junk.
 tags:
   - 2160p
   - SDR
   - Russian
 upgradesAllowed: true
 minCustomFormatScore: 0
-upgradeUntilScore: 7000
+upgradeUntilScore: 7500
 minScoreIncrement: 1
 custom_formats:
   - name: RU SDR
     score: 5000
   - name: RU HEVC
     score: 2500
+  - name: RU REMUX
+    score: 1800
   - name: RU WEB-DL
     score: 1200
   - name: RU WEBRip
@@ -31,13 +33,13 @@ custom_formats:
     score: -5000
   - name: RU Reject AI
     score: -3000
-  - name: RU Reject REMUX
-    score: -5000
 qualities:
   - id: -101
     name: RU 2160p SDR
     description: 2160p SDR priority group for Russian trackers.
     qualities:
+      - id: 3
+        name: Remux-2160p
       - id: 5
         name: WEBDL-2160p
       - id: 4

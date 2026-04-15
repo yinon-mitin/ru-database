@@ -1,16 +1,18 @@
 name: RU 1080p SDR
-description: 1080p SDR profile for Russian trackers. Prefers HEVC and WEB-DL while rejecting HDR, disc structures, REMUX and common junk.
+description: 1080p SDR profile for Russian trackers. Prefers REMUX, HEVC and WEB-DL while rejecting HDR, disc structures and common junk.
 tags:
   - 1080p
   - SDR
   - Russian
 upgradesAllowed: true
 minCustomFormatScore: 0
-upgradeUntilScore: 2500
+upgradeUntilScore: 3000
 minScoreIncrement: 1
 custom_formats:
   - name: RU HEVC
     score: 1000
+  - name: RU REMUX
+    score: 900
   - name: RU WEB-DL
     score: 800
   - name: RU WEBRip
@@ -29,13 +31,13 @@ custom_formats:
     score: -5000
   - name: RU Reject AI
     score: -3000
-  - name: RU Reject REMUX
-    score: -3000
 qualities:
   - id: -102
     name: RU 1080p SDR
     description: 1080p SDR priority group for Russian trackers.
     qualities:
+      - id: 8
+        name: Remux-1080p
       - id: 9
         name: WEBDL-1080p
       - id: 10
