@@ -1,0 +1,16 @@
+name: RU Upscale
+pattern: ^(?=.*(?i:upscale|upscaled)).*$
+description: Upscale marker.
+tags:
+  - Upscale
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 BDRip 2160p upscale
+  - expected: true
+    id: 2
+    input: Movie 2024 BDRip 2160p upscaled
+  - expected: false
+    id: 3
+    input: Movie 2024 BDRip 2160p

@@ -1,0 +1,13 @@
+name: RU WEBRip
+description: Matches WEBRip releases.
+tags:
+  - Source
+  - WEBRip
+  - Russian
+conditions:
+  - name: WEBRip
+    negate: false
+    pattern: RU WEBRip
+    required: true
+    type: release_title
+tests: []

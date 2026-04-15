@@ -1,0 +1,17 @@
+name: RU HDR DV HLG
+pattern: ^(?=.*((?i:HDR10\+)|(?i:HDR10)|(?i:HDR)|(?i:Dolby[ ._-]?Vision)|\bDV\b|(?i:HLG))).*$
+description: HDR / Dolby Vision / HLG markers.
+tags:
+  - HDR
+  - Dolby Vision
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 WEB-DL 2160p HDR
+  - expected: true
+    id: 2
+    input: Movie 2024 WEB-DL 2160p Dolby Vision
+  - expected: false
+    id: 3
+    input: Movie 2024 WEB-DL 2160p SDR

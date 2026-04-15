@@ -1,0 +1,18 @@
+name: RU BDRip BluRay
+description: Matches BDRip or BluRay releases.
+tags:
+  - Source
+  - Bluray
+  - Russian
+conditions:
+  - name: BDRip
+    negate: false
+    pattern: RU BDRip
+    required: false
+    type: release_title
+  - name: BluRay
+    negate: false
+    pattern: RU BluRay
+    required: false
+    type: release_title
+tests: []

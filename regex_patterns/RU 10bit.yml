@@ -1,0 +1,16 @@
+name: RU 10bit
+pattern: ^(?=.*(?i:10(?:[ -]?bit))).*$
+description: 10-bit marker.
+tags:
+  - Bit Depth
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 2160p SDR 10-bit
+  - expected: true
+    id: 2
+    input: Movie 2024 2160p SDR 10bit
+  - expected: false
+    id: 3
+    input: Movie 2024 2160p SDR

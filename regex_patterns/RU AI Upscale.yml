@@ -1,0 +1,20 @@
+name: RU AI Upscale
+pattern: ^(?=.*((?i:AI[ ._-]?upscale)|(?i:AI[ ._-]?enhanced)|(?i:hand[ ._-]?made[ ._-]?upscale[ ._-]?AI)|\bAI\b)).*$
+description: AI upscale / AI enhanced markers.
+tags:
+  - Upscale
+  - AI
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 [hand made Upscale AI]
+  - expected: true
+    id: 2
+    input: Movie 2024 AI upscale
+  - expected: true
+    id: 3
+    input: Movie 2024 AI enhanced
+  - expected: false
+    id: 4
+    input: Movie 2024 WEB-DL 2160p SDR

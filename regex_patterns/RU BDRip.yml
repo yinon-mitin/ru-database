@@ -1,0 +1,14 @@
+name: RU BDRip
+pattern: ^(?=.*(?i:BDRip)).*$
+description: BDRip source marker.
+tags:
+  - Source
+  - Bluray
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 BDRip 1080p
+  - expected: false
+    id: 2
+    input: Movie 2024 WEB-DL 1080p
