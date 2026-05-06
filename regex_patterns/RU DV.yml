@@ -1,6 +1,6 @@
 name: RU DV
-pattern: ^(?=.*((?i:Dolby[ ._-]?Vision)|\bDV\b)).*$
-description: Dolby Vision marker.
+pattern: ^(?=.*(?i:(?:^|[^A-Za-z0-9])(?:Dolby[ ._-]?Vision|DV)(?:$|[^A-Za-z0-9]))).*$
+description: Standalone Dolby Vision or DV marker.
 tags:
   - Dolby Vision
   - Russian
@@ -14,3 +14,9 @@ tests:
   - expected: false
     id: 3
     input: Movie 2024 WEB-DL 2160p SDR
+  - expected: false
+    id: 4
+    input: Movie 2024 DVD 1080p
+  - expected: false
+    id: 5
+    input: Movie HDRezka WEB-DL 1080p

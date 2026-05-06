@@ -1,0 +1,23 @@
+name: RU Reject HDR DV HLG
+pattern: ^(?=.*(?i:(?:^|[^A-Za-z0-9])(?:HDR10(?:\+|[ ._-]?PLUS)|HDR10|HDR|Dolby[ ._-]?Vision|DV|HLG)(?:$|[^A-Za-z0-9]))).*$
+description: Standalone HDR, HDR10, HDR10+, Dolby Vision, DV or HLG markers.
+tags:
+  - HDR
+  - Dolby Vision
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 WEB-DL 2160p HDR
+  - expected: true
+    id: 2
+    input: Movie 2024 WEB-DL 2160p Dolby Vision
+  - expected: true
+    id: 3
+    input: Movie 2024 WEB-DL 2160p HLG
+  - expected: false
+    id: 4
+    input: Movie 2024 WEB-DL 2160p SDR
+  - expected: false
+    id: 5
+    input: Movie HDRezka WEB-DL 1080p

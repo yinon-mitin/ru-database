@@ -1,38 +1,43 @@
-name: RU 1080p HDR
-description: 1080p HDR profile for Russian trackers. Prefers HDR-family releases, HEVC, REMUX and strong web or BluRay sources.
+name: RU 2160p HDR Fallback 1080p HDR
+description: 4K HDR profile for Russian trackers with 1080p HDR fallback. Prefers HDR-family releases, HEVC, REMUX and strong web or BluRay sources.
 tags:
+  - 2160p
   - 1080p
   - HDR
   - Russian
 upgradesAllowed: true
 minCustomFormatScore: 0
-upgradeUntilScore: 6000
+upgradeUntilScore: 9000
 minScoreIncrement: 1
 custom_formats:
   - name: RU HDR ANY
-    score: 4000
+    score: 5000
   - name: RU DV
-    score: 2000
+    score: 2500
   - name: RU HDR10+
-    score: 1500
+    score: 1800
   - name: RU HDR10
-    score: 1000
+    score: 1200
   - name: RU HDR
-    score: 800
-  - name: RU HEVC
     score: 1000
+  - name: RU HEVC
+    score: 2000
   - name: RU REMUX
-    score: 900
+    score: 1800
   - name: RU WEB-DL
-    score: 800
+    score: 1200
   - name: RU WEBRip
-    score: 600
+    score: 700
   - name: RU BDRip BluRay
     score: 500
+  - name: RU 10bit
+    score: 500
   - name: RU Multi Dub
-    score: 150
+    score: 200
   - name: RU Subtitles
     score: 50
+  - name: RU 8bit
+    score: -250
   - name: RU Reject BR-DISK
     score: -10000
   - name: RU Reject AV1
@@ -44,10 +49,18 @@ custom_formats:
   - name: RU Reject AI
     score: -3000
 qualities:
-  - id: -104
-    name: RU 1080p HDR
-    description: 1080p HDR priority group for Russian trackers.
+  - id: -106
+    name: RU 2160p HDR Fallback 1080p HDR
+    description: 2160p HDR priority group with 1080p HDR fallback for Russian trackers.
     qualities:
+      - id: 3
+        name: Remux-2160p
+      - id: 5
+        name: WEBDL-2160p
+      - id: 4
+        name: Bluray-2160p
+      - id: 6
+        name: WEBRip-2160p
       - id: 8
         name: Remux-1080p
       - id: 9
@@ -57,6 +70,6 @@ qualities:
       - id: 11
         name: WEBRip-1080p
 upgrade_until:
-  id: -104
-  name: RU 1080p HDR
+  id: -106
+  name: RU 2160p HDR Fallback 1080p HDR
 language: must_original

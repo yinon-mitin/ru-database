@@ -1,6 +1,6 @@
 name: RU REMUX
-pattern: ^(?=.*(?i:REMUX)).*$
-description: REMUX marker.
+pattern: ^(?=.*(?i:(?:^|[^A-Za-z0-9])REMUX(?:$|[^A-Za-z0-9]))).*$
+description: Standalone REMUX marker.
 tags:
   - Source
   - Remux
@@ -9,6 +9,12 @@ tests:
   - expected: true
     id: 1
     input: Movie 2024 UHD BluRay REMUX 2160p
-  - expected: false
+  - expected: true
     id: 2
+    input: Movie.2024.BluRay-Remux.1080p
+  - expected: false
+    id: 3
     input: Movie 2024 BDRip 2160p
+  - expected: false
+    id: 4
+    input: Movie 2024 Premux encode 2160p

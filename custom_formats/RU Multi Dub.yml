@@ -1,0 +1,13 @@
+name: RU Multi Dub
+description: Matches explicit multi-dub or multi-audio releases.
+tags:
+  - Audio
+  - Dub
+  - Russian
+conditions:
+  - name: Multi Dub
+    negate: false
+    pattern: RU Multi Dub
+    required: true
+    type: release_title
+tests: []

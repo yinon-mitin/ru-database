@@ -1,0 +1,19 @@
+name: RU 8bit
+pattern: ^(?=.*(?i:(?:^|[^A-Za-z0-9])8(?:[ ._-]?bit)(?:$|[^A-Za-z0-9]))).*$
+description: Explicit 8-bit marker.
+tags:
+  - Bit Depth
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 2160p SDR 8-bit
+  - expected: true
+    id: 2
+    input: Movie 2024 2160p SDR 8bit
+  - expected: false
+    id: 3
+    input: Movie 2024 2160p SDR 10-bit
+  - expected: false
+    id: 4
+    input: Movie 2024 2160p SDR

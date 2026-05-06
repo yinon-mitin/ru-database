@@ -1,0 +1,22 @@
+name: RU Subtitles
+pattern: ^(?=.*((?i:(?:^|[^A-Za-z0-9])(?:RUS(?:SIAN)?|RU)[ ._-]?(?:SUBS?|SUBTITLES?)(?:$|[^A-Za-z0-9])|(?:^|[^A-Za-z0-9])(?:SUBS?|SUBTITLES?)[ ._-]?(?:RUS(?:SIAN)?|RU)(?:$|[^A-Za-z0-9]))|(?i:(?:^|[^A-Za-zА-Яа-яЁё0-9])(?:РУС(?:СКИЕ)?[ ._-]?СУБТИТРЫ|СУБТИТРЫ[ ._-]?РУС(?:СКИЕ)?)(?:$|[^A-Za-zА-Яа-яЁё0-9])))).*$
+description: Explicit Russian subtitles marker.
+tags:
+  - Subtitles
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 WEB-DL 2160p RUS SUBS
+  - expected: true
+    id: 2
+    input: Movie 2024 WEB-DL 1080p Subtitles RU
+  - expected: true
+    id: 3
+    input: Фильм 2024 WEB-DL 1080p рус субтитры
+  - expected: false
+    id: 4
+    input: Movie 2024 WEB-DL 1080p ENG SUBS
+  - expected: false
+    id: 5
+    input: Movie 2024 WEB-DL 1080p

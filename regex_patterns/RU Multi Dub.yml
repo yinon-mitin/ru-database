@@ -1,0 +1,23 @@
+name: RU Multi Dub
+pattern: ^(?=.*(?i:(?:^|[^A-Za-z0-9])(?:MULTI(?:[ ._-]?(?:DUB|DUBBED|VO|VOICE|AUDIO))?|[2-9][Xx][ ._-]?(?:DUB|DUBBED|VO|VOICE|AUDIO|MVO|DVO|AVO)|(?:DUB|DUBBED|VO|VOICE|AUDIO)[ ._-]?[2-9][Xx])(?:$|[^A-Za-z0-9]))).*$
+description: Explicit multi-dub or multi-audio marker.
+tags:
+  - Audio
+  - Dub
+  - Russian
+tests:
+  - expected: true
+    id: 1
+    input: Movie 2024 WEB-DL 2160p Multi Dub
+  - expected: true
+    id: 2
+    input: Movie 2024 WEB-DL 1080p 2xDub
+  - expected: true
+    id: 3
+    input: Movie 2024 WEB-DL 1080p Multi Audio
+  - expected: false
+    id: 4
+    input: Movie 2024 WEB-DL 1080p Dubbed
+  - expected: false
+    id: 5
+    input: Movie 2024 WEB-DL 1080p MVO

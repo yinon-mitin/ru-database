@@ -1,5 +1,5 @@
 name: RU 1080p SDR
-description: 1080p SDR profile for Russian trackers. Prefers REMUX, HEVC and WEB-DL while rejecting HDR, disc structures and common junk.
+description: 1080p SDR profile for Russian trackers. Prefers HEVC, REMUX and strong web or BluRay sources while rejecting HDR-family releases and common junk.
 tags:
   - 1080p
   - SDR
@@ -19,6 +19,10 @@ custom_formats:
     score: 600
   - name: RU BDRip BluRay
     score: 500
+  - name: RU Multi Dub
+    score: 150
+  - name: RU Subtitles
+    score: 50
   - name: RU Reject HDR DV HLG
     score: -10000
   - name: RU Reject BR-DISK

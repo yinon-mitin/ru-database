@@ -1,0 +1,12 @@
+name: RU Subtitles
+description: Matches releases with explicit Russian subtitles.
+tags:
+  - Subtitles
+  - Russian
+conditions:
+  - name: Subtitles
+    negate: false
+    pattern: RU Subtitles
+    required: true
+    type: release_title
+tests: []

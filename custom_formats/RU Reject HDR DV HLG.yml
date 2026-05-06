@@ -7,7 +7,7 @@ tags:
 conditions:
   - name: HDR DV HLG
     negate: false
-    pattern: RU HDR DV HLG
+    pattern: RU Reject HDR DV HLG
     required: true
     type: release_title
 tests: []

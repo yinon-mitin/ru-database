@@ -1,40 +1,37 @@
-name: RU 2160p HDR
-description: 4K HDR profile for Russian trackers. Prefers HDR-family releases, HEVC, REMUX and strong web sources.
+name: RU 2160p SDR Fallback 1080p SDR
+description: 4K SDR profile for Russian trackers with 1080p SDR fallback. Prefers explicit SDR, HEVC, REMUX and strong web or BluRay sources while rejecting HDR-family releases and common junk.
 tags:
   - 2160p
-  - HDR
+  - 1080p
+  - SDR
   - Russian
 upgradesAllowed: true
 minCustomFormatScore: 0
-upgradeUntilScore: 9000
+upgradeUntilScore: 7500
 minScoreIncrement: 1
 custom_formats:
-  - name: RU HDR ANY
+  - name: RU SDR
     score: 5000
-  - name: RU DV
-    score: 2500
-  - name: RU HDR10+
-    score: 1800
-  - name: RU HDR10
-    score: 1200
-  - name: RU HDR
-    score: 1000
   - name: RU HEVC
-    score: 2000
+    score: 2500
   - name: RU REMUX
     score: 1800
   - name: RU WEB-DL
     score: 1200
   - name: RU WEBRip
     score: 700
-  - name: RU 10bit
+  - name: RU BDRip BluRay
     score: 500
+  - name: RU 10bit
+    score: 400
   - name: RU Multi Dub
     score: 200
   - name: RU Subtitles
     score: 50
   - name: RU 8bit
-    score: -250
+    score: -150
+  - name: RU Reject HDR DV HLG
+    score: -10000
   - name: RU Reject BR-DISK
     score: -10000
   - name: RU Reject AV1
@@ -46,9 +43,9 @@ custom_formats:
   - name: RU Reject AI
     score: -3000
 qualities:
-  - id: -103
-    name: RU 2160p HDR
-    description: 2160p HDR priority group for Russian trackers.
+  - id: -105
+    name: RU 2160p SDR Fallback 1080p SDR
+    description: 2160p SDR priority group with 1080p SDR fallback for Russian trackers.
     qualities:
       - id: 3
         name: Remux-2160p
@@ -58,7 +55,15 @@ qualities:
         name: Bluray-2160p
       - id: 6
         name: WEBRip-2160p
+      - id: 8
+        name: Remux-1080p
+      - id: 9
+        name: WEBDL-1080p
+      - id: 10
+        name: Bluray-1080p
+      - id: 11
+        name: WEBRip-1080p
 upgrade_until:
-  id: -103
-  name: RU 2160p HDR
+  id: -105
+  name: RU 2160p SDR Fallback 1080p SDR
 language: must_original

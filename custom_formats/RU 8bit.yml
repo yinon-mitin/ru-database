@@ -1,0 +1,12 @@
+name: RU 8bit
+description: Matches explicit 8-bit releases.
+tags:
+  - Bit Depth
+  - Russian
+conditions:
+  - name: 8bit
+    negate: false
+    pattern: RU 8bit
+    required: true
+    type: release_title
+tests: []

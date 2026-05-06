@@ -1,6 +1,6 @@
 name: RU HDR10+
-pattern: ^(?=.*(?i:HDR10\+)).*$
-description: HDR10+ marker.
+pattern: ^(?=.*(?i:(?:^|[^A-Za-z0-9])HDR10(?:\+|[ ._-]?PLUS)(?:$|[^A-Za-z0-9]))).*$
+description: Standalone HDR10+ marker.
 tags:
   - HDR
   - Russian
@@ -8,6 +8,12 @@ tests:
   - expected: true
     id: 1
     input: Movie 2024 WEB-DL 2160p HDR10+
-  - expected: false
+  - expected: true
     id: 2
+    input: Movie 2024 WEB-DL 2160p HDR10Plus
+  - expected: false
+    id: 3
     input: Movie 2024 WEB-DL 2160p HDR10
+  - expected: false
+    id: 4
+    input: HDRezka Studio WEB-DL 1080p

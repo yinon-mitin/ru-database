@@ -1,6 +1,6 @@
 name: RU HDR
-pattern: ^(?=.*(?i:HDR)).*$
-description: HDR marker.
+pattern: ^(?=.*(?i:(?:^|[^A-Za-z0-9])HDR(?:$|[^A-Za-z0-9]))).*$
+description: Standalone HDR marker.
 tags:
   - HDR
   - Russian
@@ -8,6 +8,15 @@ tests:
   - expected: true
     id: 1
     input: Movie 2024 WEB-DL 2160p HDR
-  - expected: false
+  - expected: true
     id: 2
+    input: Movie.2024.2160p.HDR.WEB-DL
+  - expected: false
+    id: 3
     input: Movie 2024 WEB-DL 2160p SDR
+  - expected: false
+    id: 4
+    input: HDRezka Studio WEB-DL 1080p
+  - expected: false
+    id: 5
+    input: Movie 2024 WEB-DL 2160p HDR10
